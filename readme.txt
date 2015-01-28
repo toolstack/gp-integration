@@ -14,14 +14,14 @@ Integrates GlotPress with your WordPress installation.
 
 GlotPress is a great way to manage and work collaborative on translations for your projects and with GP Integration it becomes even better!
 
-GP Integration adds the missing features you need to run GlotPress effectivly:
+GP Integration adds the missing features you need to run GlotPress effectively:
 
-	* Manage admin users
-	* Add and delete and reset passwords for users in the local GlotPress user table
-	* Delete projects and translation sets
-	* View your GlotPress site right in the WordPress Admin interface
-	* Shortcode to embed your GlotPress installation right in to your WordPress front end
-	* Support for both integrated (your using the WordPress database) and standalone (your using another database on the same server)
+* Manage admin users
+* Add and delete and reset passwords for users in the local GlotPress user table
+* Delete projects and translation sets
+* View your GlotPress site right in the WordPress Admin interface
+* Shortcode to embed your GlotPress installation right in to your WordPress front end
+* Support for both integrated (your using the WordPress database) and standalone (your using another database on the same server)
 
 = License =
 	
