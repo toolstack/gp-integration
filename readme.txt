@@ -54,7 +54,7 @@ The GlotPress logo is a PNG, but it doesn't have a transparent background set.  
 
 The shortcode creats an iFrame along with a bit of JavaScript.  The JavaScript will resize the iFrame to match the height of the GlotPress page being displayed.  The JavaScript fires once a second so you may see a slight delay in the iFrame being resized.
 
-Also note that external links the "Proudly powered by GlotPress" in the footer, if clicked, will break the resizing script.
+Also note that external links, like the "Proudly powered by GlotPress" in the footer, if clicked, will break the resizing script.
 
 == Screenshots ==
 
