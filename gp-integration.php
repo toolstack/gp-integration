@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: GlotPress Integration
+Plugin Name: GP Integration
 Plugin URI: http://toolstack.com/gp-integration
 Description: A fully integrated version of GlotPress for WordPress.
 Version: 0.5
