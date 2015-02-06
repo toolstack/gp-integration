@@ -52,7 +52,8 @@ The GlotPress logo is a PNG, but it doesn't have a transparent background set.  
 
 = What is the shortcode name? =
 
-[gp-integration]
+[gp-integration] will embed GlotPress.
+[gp-integration-link] will create a link to your GlotPress install.
 
 = How does the shortcode work? =
 
@@ -71,6 +72,10 @@ Also note that external links, like the "Proudly powered by GlotPress" in the fo
 7. Admin management.
 
 == Changelog ==
+= 0.6 =
+* Added gp-integration-link short code.
+* Updated options system.
+
 = 0.5 =
 * Initial release.
 

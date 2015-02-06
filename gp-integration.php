@@ -13,6 +13,7 @@ License: GPL2
 	define('GP_INTEGRATION_VERSION', '0.5');
 
 	include_once( 'ToolStack-Utilities.class.php' );
+	include_once( 'gpi-settings.php' );
 
 	// Create out global utilities object.  We might be tempted to load the user options now, but that's not possible as WordPress hasn't processed the login this early yet.
 	$gpi_utils = new ToolStack_Utilities( 'gp_integration' );
@@ -668,6 +669,11 @@ License: GPL2
 		return $result;
 	}
 	
+	add_shortcode( 'gp-integration-link', 'gp_integration_link_shortcode' );
+
+	function gp_integration_link_shortcode( $atts ) {
+		return '<a href="' . gp_integration_get_gp_path() . '" target="_blank">GlotPress</a>';
+	}
 	function gp_integration_confirm_delete_javascript() {
 ?>
 <script type="text/javascript">
@@ -691,20 +697,14 @@ License: GPL2
 		{
 		global $gpdb, $gpi_utils;
 
+		$gpi_options = gpi_user_options_array();
+
 		if( array_key_exists( 'gp-integration-options-save', $_POST ) ) {
-			if( array_key_exists( 'glotpress_db_name', $_POST ) ) {
-				$table_prefix = esc_html( $_POST['glotpress_db_name'] );
-				$gpi_utils->update_option('gp_database_name', $table_prefix );
-			}
-
-			if( array_key_exists( 'glotpress_db_prefix', $_POST ) ) {
-				$table_prefix = esc_html( $_POST['glotpress_db_prefix'] );
-				$gpi_utils->update_option('gp_table_prefix', $table_prefix );
-			}
-
-			if( array_key_exists( 'glotpress_path', $_POST ) ) {
-				$table_prefix = esc_html( $_POST['glotpress_path'] );
-				$gpi_utils->update_option('gp_path', $table_prefix );
+			foreach( $gpi_options as $key => $option ) {
+				if( array_key_exists( $key, $_POST ) ) {
+					$setting = esc_html( $_POST[$key] );
+					$gpi_utils->update_option($key, $setting );
+				}
 			}
 		}
 
@@ -714,11 +714,43 @@ License: GPL2
 		<legend><span style="font-size: 24px; font-weight: 700;"><?php _e('GP Integration Options');?></span></legend>
 		<form method="post">
 
-				<div> <?php _e('GlotPress DB Name'); ?>: <input name="glotpress_db_name" type="text" size="10" id="glotpress_db_name" value="<?php echo $gpi_utils->get_option('gp_database_name'); ?>"></div>
+			<table>
+<?php
+				
+				foreach( $gpi_options as $name => $option ) {
 
-				<div> <?php _e('GlotPress DB Prefix'); ?>: <input name="glotpress_db_prefix" type="text" size="10" id="glotpress_db_prefix" value="<?php echo gp_integration_get_gp_table_prefix(); ?>"></div>
+					switch( $option['type'] ) {
+						case 'title':
+							echo "					<tr><td colspan=\"2\"><h3>" . __($name) . "</h3></td></tr>\n";
+							
+							break;
+						case 'desc':
+							echo "					<tr><td></td><td><span class=\"description\">" . __($option['desc']) . "</span></td></tr>\n";
+							
+							break;
+						case 'bool':
+							if( $gpi_utils->get_option($name) == true ) { $checked = " CHECKED"; } else { $checked = ""; } 
+							echo "					<tr><td style=\"text-align: right;\">" . __($option['desc']) . ":</td><td><input name=\"$name\" value=\"1\" type=\"checkbox\" id=\"$name\"" . $checked. "></td></tr>\n";
+						
+							break;
+						case 'image':
+							echo "					<tr><td style=\"text-align: right;\">" . __($option['desc']) . ":</td><td><input name=\"$name\" type=\"text\" size=\"40\" id=\"$name\" value=\"" . $gpi_utils->get_option($name) . "\"></td></tr>\n";
+						
+							break;
+						default:
+							if( $option['height'] <= 1 ) {
+								echo "					<tr><td style=\"text-align: right;\">" . __($option['desc']) . ":</td><td><input name=\"$name\" type=\"text\" size=\"{$option['size']}\" id=\"$name\" value=\"" . $gpi_utils->get_option($name) . "\"></td></tr>\n";
+							}
+							else {
+								echo "					<tr><td style=\"text-align: right;\">" . __($option['desc']) . ":</td><td><textarea name=\"$name\" type=\"text\" cols=\"{$option['size']}\" rows=\"{$option['height']}\" id=\"$name\">" . esc_html( $gpi_utils->get_option($name) ) . "</textarea></td></tr>\n";
+							}
+								
+					}
+				}
 
-				<div> <?php _e('GlotPress Path'); ?>: <input name="glotpress_path" type="text" size="40" id="glotpress_path" value="<?php echo gp_integration_get_gp_path(); ?>"></div>
+
+?>
+				</table>
 
 			<div class="submit"><input type="submit" class="button button-primary" name="gp-integration-options-save" value="<?php _e('Update Options') ?>" /></div>
 		</form>
