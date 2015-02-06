@@ -14,6 +14,8 @@ Integrates GlotPress with your WordPress installation.
 
 GlotPress is a great way to manage and work collaborative on translations for your projects and with GP Integration it becomes even better!
 
+Don't have GlotPress installed?  Want a simpler way to do it?  Check out [Glot-O-Matic](http://glot-o-matic.com)!
+
 GP Integration adds the missing features you need to run GlotPress effectively:
 
 * Manage admin users
@@ -40,7 +42,9 @@ This code is released under the GPL v2, see license.txt for details.
 
 = I don't have GlotPress installed, can I still use GP Integration? =
 
-No, you have to have a copy of GlotPress installed for GP Integration to be useful.  A future plugin will be released that includes a full copy of GlotPress setup and configured to run as part of the plugin, but that is still in development.
+No, you have to have a copy of GlotPress installed for GP Integration to be useful.  
+
+However you can use (Glot-O-Matic)[http://glot-o-matic.com] and get all the features of GP Integration with a complete copy of GlotPress included!
 
 = In your screen shots your GlotPress logo background matches the background of the WordPress admin area, how did you do that? =
 
