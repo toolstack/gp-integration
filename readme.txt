@@ -2,10 +2,10 @@
 Contributors: GregRoss
 Plugin URI: http://toolstack.com/gp-integration
 Author URI: http://toolstack.com
-Tags: glotpress admin
+Tags: glotpress, admin
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 0.5
+Stable tag: 1.0
 License: GPLv2
 
 Integrates GlotPress with your WordPress installation.
@@ -72,11 +72,13 @@ Also note that external links, like the "Proudly powered by GlotPress" in the fo
 7. Admin management.
 
 == Changelog ==
-= 0.6 =
+= 1.0 =
+* Release date: May 15, 2015
 * Added gp-integration-link short code.
 * Updated options system.
 
 = 0.5 =
+* Release date: January 26, 2014
 * Initial release.
 
 == Upgrade Notice ==
