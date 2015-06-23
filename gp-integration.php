@@ -705,6 +705,9 @@ License: GPL2
 					$setting = esc_html( $_POST[$key] );
 					$gpi_utils->update_option($key, $setting );
 				}
+				else if( $option['type'] == 'bool' ) {
+					$gpi_utils->update_option($key, false);
+				}
 			}
 		}
 
