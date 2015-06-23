@@ -12,11 +12,11 @@ License: GPL2
 	// These defines are used later for various reasons.
 	define('GP_INTEGRATION_VERSION', '1.0');
 
-	include_once( 'ToolStack-Utilities.class.php' );
+	include_once( 'ToolStack-WP-Utilities.class.php' );
 	include_once( 'gpi-settings.php' );
 
 	// Create out global utilities object.  We might be tempted to load the user options now, but that's not possible as WordPress hasn't processed the login this early yet.
-	$gpi_utils = new ToolStack_Utilities( 'gp_integration' );
+	$gpi_utils = new ToolStack_WP_Utilities_V2_3( 'gp_integration' );
 
 	function gp_integration_php_after_plugin_row() {
 		echo '<tr><th scope="row" class="check-column"></th><td class="plugin-title" colspan="10"><span style="padding: 3px; color: white; background-color: red; font-weight: bold">&nbsp;&nbsp;' . __('ERROR: GlotPress Integration has detected an unsupported version of PHP, GlotPress Integration will not function without PHP Version ') . GP_INTEGRATON_REQUIRED_PHP_VERSION . __(' or higher!') . '  ' . __('Your current PHP version is') . ' ' . phpversion() . '.&nbsp;&nbsp;</span></td></tr>';
