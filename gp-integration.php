@@ -11,6 +11,7 @@ License: GPL2
 
 	// These defines are used later for various reasons.
 	define('GP_INTEGRATION_VERSION', '1.0');
+	define('GP_INTEGRATON_REQUIRED_PHP_VERSION', '5.0' );
 
 	include_once( 'ToolStack-WP-Utilities.class.php' );
 	include_once( 'gpi-settings.php' );
