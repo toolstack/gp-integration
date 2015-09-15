@@ -72,6 +72,12 @@ Also note that external links, like the "Proudly powered by GlotPress" in the fo
 7. Admin management.
 
 == Changelog ==
+= 1.5 =
+* Release date: TBD
+* Added gp-integration-translators-list short code.
+* Updated settings/about page.
+* Updated utility library.
+
 = 1.0 =
 * Release date: May 15, 2015
 * Added gp-integration-link short code.
@@ -82,5 +88,5 @@ Also note that external links, like the "Proudly powered by GlotPress" in the fo
 * Initial release.
 
 == Upgrade Notice ==
-= 0.5 =
+= 1.5 =
 * None.

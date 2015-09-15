@@ -10,6 +10,7 @@
 			$gpi_utils->update_option('gp_database_name', DB_NAME );
 			$gpi_utils->update_option('gp_table_prefix', 'gp_' );
 			$gpi_utils->update_option('gp_path', plugin_dir_url( __FILE__ ) . 'gp' );
+			$gpi_utils->update_option('gp_dir', ABSPATH . '/gp' );
 
 		} else {
 
