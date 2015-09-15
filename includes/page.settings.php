@@ -32,7 +32,7 @@
 <div class="wrap">
 
 <script type="text/javascript">jQuery(document).ready(function() { jQuery("#tabs").tabs(); jQuery("#tabs").tabs("option", "active",0);} );</script>
-<h2><?php _e('GP Integration Options');?></h2>
+<h2><?php _e('GP Integration Settings');?></h2>
 
 	<div id="tabs">
 		<ul>
@@ -57,7 +57,7 @@
 					</tr>
 
 					<tr valign="top">
-						<td scope="row" align="center"><h2><?php echo sprintf(__('GP Integrationr V%s'), GP_INTEGRATION_VERSION); ?></h2></td>
+						<td scope="row" align="center"><h2><?php echo sprintf(__('GP Integration V%s'), GP_INTEGRATION_VERSION); ?></h2></td>
 					</tr>
 
 					<tr valign="top">
