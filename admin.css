@@ -1,8 +1,0 @@
-#adminmenu #toplevel_page_gp-integration-gp-integration .wp-menu-image:before {
-	content: "\f130";
-}
-
-#wp-admin-bar-gp-integration-menu .ab-icon:before{
-	font-family: "dashicons" !important;
-	content: "\f130" !important;
-}
