@@ -74,7 +74,7 @@ Also note that external links, like the "Proudly powered by GlotPress" in the fo
 == Changelog ==
 = 1.5 =
 * Release date: October 8, 2015
-* Added gp-integration-translators-list short code.
+* Added gp-integration-translator-list short code.
 * Added translation support.
 * Fixed warning messages during install if GP_DEBUG is enabled.
 * Fixed missing define.
