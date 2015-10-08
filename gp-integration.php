@@ -33,7 +33,7 @@ License: GPL2
 		return; 
 	} 
 
-	GLOBAL $wpdb;
+	GLOBAL $wpdb, $gpdb;
 	
 	$gpdb = $wpdb;
 	$gpi_remote_db = false;
