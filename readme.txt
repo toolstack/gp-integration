@@ -5,7 +5,7 @@ Author URI: http://toolstack.com
 Tags: glotpress, admin
 Requires at least: 3.9
 Tested up to: 4.3
-Stable tag: 1.0
+Stable tag: 1.5
 License: GPLv2
 
 Integrates GlotPress with your WordPress installation.

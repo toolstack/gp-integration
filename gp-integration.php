@@ -3,7 +3,7 @@
 Plugin Name: GP Integration
 Plugin URI: http://toolstack.com/gp-integration
 Description: A fully integrated version of GlotPress for WordPress.
-Version: 1.0
+Version: 1.5
 Author: Greg Ross
 Author URI: http://toolstack.com
 Text Domain: gp-integration
@@ -12,7 +12,7 @@ License: GPL2
 */
 
 	// These defines are used later for various reasons.
-	define('GP_INTEGRATION_VERSION', '1.0');
+	define('GP_INTEGRATION_VERSION', '1.5');
 	define('GP_INTEGRATON_REQUIRED_PHP_VERSION', '5.0' );
 
 	include_once( 'ToolStack-WP-Utilities.class.php' );
