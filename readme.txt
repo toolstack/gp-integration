@@ -54,6 +54,7 @@ The GlotPress logo is a PNG, but it doesn't have a transparent background set.  
 
 [gp-integration] will embed GlotPress.
 [gp-integration-link] will create a link to your GlotPress install.
+[gp-integration-translator-list] will create a formated table of your translators.
 
 = How does the shortcode work? =
 
