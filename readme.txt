@@ -4,7 +4,7 @@ Plugin URI: http://toolstack.com/gp-integration
 Author URI: http://toolstack.com
 Tags: glotpress, admin
 Requires at least: 3.9
-Tested up to: 4.3
+Tested up to: 4.6.1
 Stable tag: 1.5
 License: GPLv2
 
