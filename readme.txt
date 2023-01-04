@@ -95,3 +95,4 @@ Also note that external links, like the "Proudly powered by GlotPress" in the fo
 == Upgrade Notice ==
 = 1.5 =
 * None.
+
